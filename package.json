@@ -2,6 +2,7 @@
   "name": "nextjs",
   "version": "0.1.0",
   "private": true,
+  "license": "GPL",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,6 +14,7 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@tailwindcss/ui": "^0.6.2",
     "@types/node": "^14.14.2",
     "@types/react": "^16.9.53",
     "postcss-preset-env": "^6.7.0",
