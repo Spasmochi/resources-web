@@ -4,6 +4,7 @@ import { useQuery } from "react-query"
 import queryApi from "../hooks/queryAPI"
 import { Card } from "../components/Card"
 import { Grid } from "../layouts/Grid"
+import { Container } from "../components/Container"
 
 const url = "https://sampleapis.com/codingresources/api/codingResources"
 
@@ -23,15 +24,17 @@ export default function Home({ resources }: homeProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={"bg-blue-200 w-screen h-full"}>
-        <Grid>
-          {data.map((resource: object) => (
-            <Card
-              key={resource.id}
-              description={resource.description}
-              url={resource.url}
-            />
-          ))}
-        </Grid>
+        <Container>
+          <Grid>
+            {data.map((resource: object) => (
+              <Card
+                key={resource.id}
+                description={resource.description}
+                url={resource.url}
+              />
+            ))}
+          </Grid>
+        </Container>
       </main>
     </>
   )
