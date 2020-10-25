@@ -16,7 +16,7 @@ export const SimpleBadge: FC<Props> = ({ color, size, label }: Props) => {
   return (
     <span
       className={`inline-flex items-center ${
-        size === "md" ? "px-2.5" : "px-3.5"
+        size === "md" ? "px-2" : "px-3"
       } py-0.5 rounded-full text-xs font-medium leading-4 bg-${color}-100 text-${color}-800`}
     >
       {label}
