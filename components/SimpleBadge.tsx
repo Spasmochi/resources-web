@@ -1,3 +1,5 @@
+import { FC } from "react"
+
 interface Props {
   color: string
   size: "md" | "lg"
@@ -10,7 +12,7 @@ interface Props {
  * @param size md or lg, change size
  * @param label string, label text
  */
-export const SimpleBadge = ({ color, size, label }: Props) => {
+export const SimpleBadge: FC<Props> = ({ color, size, label }: Props) => {
   return (
     <span
       className={`inline-flex items-center ${

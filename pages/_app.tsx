@@ -3,8 +3,9 @@ import { ReactQueryDevtools } from "react-query-devtools"
 
 import "../styles/tailwind.css"
 import "../styles/globals.css"
+import { FC } from "react"
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Component {...pageProps} />

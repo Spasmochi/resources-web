@@ -5,7 +5,10 @@ type queryTypes = {
 }
 
 const queryApi = ({ url }: queryTypes) => {
-  return axios.get(url).then(res => res.data)
+  return axios
+    .get(url)
+    .then(res => res.data)
+    .catch(error => console.log(error))
 }
 
 export default queryApi

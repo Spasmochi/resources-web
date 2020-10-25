@@ -17,7 +17,12 @@ export const Card: FC<Props> = ({ description, url, topics }: Props) => {
       <div>
         {topics
           ? topics.map(topic => (
-              <SimpleBadge key={topic} label={topic} size={"lg"} />
+              <SimpleBadge
+                key={topic}
+                label={topic}
+                size={"lg"}
+                color={"indigo"}
+              />
             ))
           : ""}
       </div>
