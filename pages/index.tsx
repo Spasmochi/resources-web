@@ -5,6 +5,7 @@ import queryApi from "../hooks/queryAPI"
 import { Card } from "../components/Card"
 import { Grid } from "../layouts/Grid"
 import { Container } from "../components/Container"
+import { FC } from "react"
 
 const url = "https://sampleapis.com/codingresources/api/codingResources"
 
@@ -12,11 +13,10 @@ type homeProps = {
   resources: object
 }
 
-export default function Home({ resources }: homeProps) {
+const Home: FC<homeProps> = ({ resources }: homeProps) => {
   const { data } = useQuery("resources", () => queryApi({ url }), {
     initialData: resources,
   })
-
   return (
     <>
       <Head>
@@ -39,6 +39,8 @@ export default function Home({ resources }: homeProps) {
     </>
   )
 }
+
+export default Home
 
 export const getStaticProps: GetStaticProps = async () => {
   const resources = await queryApi({ url })

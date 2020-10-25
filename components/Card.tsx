@@ -1,14 +1,15 @@
 import Link from "next/link"
+import { FC } from "react"
 
 interface Props {
   description: string
   url: string
 }
 
-export const Card = ({ description, url }: Props) => {
+export const Card: FC<Props> = ({ description, url }: Props) => {
   return (
-    <Link className="col-span-1 rounded-lg" href={url}>
-      <a>{description}</a>
+    <Link href={url}>
+      <a className="col-span-1 rounded-lg">{description}</a>
     </Link>
   )
 }
