@@ -9,6 +9,13 @@ import { FC } from "react"
 
 const url = "https://sampleapis.com/codingresources/api/codingResources"
 
+type apiResponse = {
+  id: string
+  description: string
+  url: string
+  topics: Array<string>
+}
+
 type homeProps = {
   resources: object
 }
@@ -26,7 +33,7 @@ const Home: FC<homeProps> = ({ resources }: homeProps) => {
       <main className={"bg-blue-200 w-screen h-full"}>
         <Container>
           <Grid>
-            {data.map((resource: object) => (
+            {data.map((resource: apiResponse) => (
               <Card
                 key={resource.id}
                 description={resource.description}
