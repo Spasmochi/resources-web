@@ -8,6 +8,12 @@ interface Props {
   topics?: Array<string>
 }
 
+/**
+ * A simple badge with backgroundColor as prop
+ * @param description string, title of resource
+ * @param url string, link to resource
+ * @param topics string, array<strings> of topics
+ */
 export const Card: FC<Props> = ({ description, url, topics }: Props) => {
   return (
     <div className="flex flex-col">
