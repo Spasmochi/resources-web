@@ -31,6 +31,7 @@ const Home: FC<homeProps> = ({ resources }: homeProps) => {
                 key={resource.id}
                 description={resource.description}
                 url={resource.url}
+                topics={resource.topics}
               />
             ))}
           </Grid>
